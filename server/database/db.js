@@ -7,7 +7,7 @@ const USERNAME = process.env.DB_USERNAME;
 const PASSWORD = process.env.DB_PASSWORD; 
 
 const Connection = () => {
-    const DB_URI = "mongodb://localhost:27017/gmail";
+    const DB_URI = `mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.flg1e5u.mongodb.net/?retryWrites=true&w=majority`;
     try {
         mongoose.connect(DB_URI, {useNewUrlParser: true,
             useUnifiedTopology: true,});
